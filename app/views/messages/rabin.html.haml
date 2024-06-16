@@ -1,0 +1,15 @@
+= link_to root_path do
+  %h1 RabinLovesHisCrush
+
+%p.logged Logged in as Rabin
+
+.chatroom.rabin-room
+  .chatroom_section.chatroom_header
+    .chatroom_section.chatroom_header_name Crush
+  .chatroom_section.chatroom_history
+    %ul.chatroom_history_list
+      - @messages.each do |message|
+        = render 'message', message: message
+  .chatroom_section.chatroom_form
+    = render 'form', message: @message
+

@@ -1,0 +1,169 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.hidden {
+    display: none;
+}
+
+.container {
+  margin-top: 20px;
+  max-width: 1140px;
+  padding: 20px 10px;
+  h1{
+    color: #ff0066;
+    font-size: 30px;
+    font-family: "Playwrite FR Moderne", cursive;
+    text-align: center;
+  }
+  p{
+    font-size: 20px;
+    font-family: "Playwrite FR Moderne", cursive;
+    text-align: center;
+    margin-top: 200px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: center;
+    .btn{
+        border: none;
+        border-radius: 5px;
+        background: #ffe6f0;
+        padding: 10px 20px;
+        text-decoration: none;
+        &:hover{text-decoration: none; color: #000}
+    };
+    .btn.crush{
+        background: #ff0066;
+        color: white;
+    }
+  }
+}
+
+a{
+    text-decoration: none;
+    font-family: "Playwrite FR Moderne", cursive;
+    text-align: center;
+    h1{color: #ff0066!important}
+    &:hover{text-decoration: none; };
+}
+
+.logged{
+    font-size: 20px;
+    font-family: "Playwrite FR Moderne", cursive;
+    text-align: center;
+}
+
+.chatroom {
+    max-width: 400px;
+    width: 100%;
+    margin: 60px auto 0;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid #8c8c8c;
+}
+  
+  .chatroom_section {
+    padding: 10px 20px;
+  }
+  
+  .chatroom_header {
+    border-bottom: 1px solid #8c8c8c;
+  }
+  
+  .chatroom_header_name {
+    position: relative;
+    font-family: "Playwrite FR Moderne", sans-serif;
+  }
+  
+  .chatroom_history {
+    flex: 2;
+  }
+  
+  .chatroom_history_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    overflow: scroll;
+  }
+  
+  .chatroom_history_list_item {
+    margin-top: auto;
+    margin-bottom: 20px;
+    max-width: 85%;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: #fff;
+  }
+  
+  .chatroom_history_list_right  {
+    align-self: flex-end;
+  }
+  
+  .chatroom_form {
+    border-top: 1px solid #8c8c8c;
+    
+    form {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  .chatroom_form_inputbox {
+    width: 100%;
+  }
+  
+  .chatroom_form_sendBtn {
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: #ffe6f0;
+    background-color: #ff0066;
+    padding: 10px 20px;
+    text-decoration: none;
+    &:hover{text-decoration: none; color: #000}
+  }
+  
+  
+  @keyframes enteringMessage {
+    0% {
+      transform: scale(1);
+      background: rgba(139,139,139, .5);
+    }
+      100% {
+      transform: scale(.8);
+      background: rgba(139,139,139, 0);
+    }
+  }
+
+.chatroom.rabin-room {
+    .rabin {
+        background: #8c8c8c;
+        text-align: right;
+    }
+        
+    .crush {
+        background: #ff0066;
+    }
+}
+
+  .chatroom.crush-room {
+    .crush {
+        background: #8c8c8c;
+        text-align: right;
+      }
+      
+      .rabin {
+        background: #ff0066;
+      }
+  }
